@@ -1,1 +1,56 @@
-<p>videojuegos works!</p>
+<h2 class="favorites-title">Nuestros Juegos Favoritos</h2>
+<div class="cards-container" *ngIf="juegos.length > 0">
+  <div class="card" *ngFor="let game of juegos">
+    <div
+      class="image"
+      [style.backgroundImage]="'url(' + game.iconoUrl + ')'"
+      (click)="id = game.appid.toString(); cargarSteam()"
+    >
+      <span class="text">{{ game.name }}</span>
+    </div>
+  </div>
+</div>
+  
+<div class="steam-container">
+    <h1>Noticias del Juego</h1>
+  
+    <!-- <div class="input-container">
+      <label for="game-id">ID del Juego:</label>
+      <input
+        id="game-id"
+        type="text"
+        [(ngModel)]="id"
+        placeholder="Ingresa el ID del juego"
+      />
+      <button (click)="cargarSteam()">Cargar Noticias</button>
+    </div> -->
+  
+    <!-- Lista de noticias -->
+    <div *ngIf="noticia.appnews.newsitems.length > 0; else noNews">
+      <ul>
+        <li *ngFor="let item of noticia.appnews.newsitems">
+          <h3>{{ item.title }}</h3>
+  
+          <!-- Mostrar imagen si existe -->
+          <img
+            *ngIf="item.imageUrl"
+            [src]="item.imageUrl"
+            alt="Noticia Imagen"
+            (error)="onImageError($event)"
+          />
+  
+          <!-- Renderizar contenido HTML -->
+          <p [innerHTML]="item.contents"></p>
+  
+          <p>{{ item.feedlabel }}</p>
+          <p><strong>Autor:</strong> {{ item.author }}</p>
+          <a [href]="item.url" target="_blank">Leer más</a>
+        </li>
+      </ul>
+    </div>
+  
+    <!-- Mensaje si no hay noticias -->
+    <ng-template #noNews>
+      <p>No hay noticias disponibles para este juego.</p>
+    </ng-template>
+  </div>
