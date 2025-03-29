@@ -33,14 +33,19 @@ export class VideojuegosComponent implements OnInit{
   cargarSteam(): void {
     this.service.getSteam(this.id).subscribe({
       next: (response: Steam) => {
+        // Filtrar las noticias para incluir solo aquellas con feed_type === 1
+        response.appnews.newsitems = response.appnews.newsitems.filter(
+          (item) => item.feed_type === 1
+        );
+  
         this.noticia = response;
-
+  
         // Procesar imágenes y limpiar enlaces
         this.noticia.appnews.newsitems.forEach((item) => {
           this.procesarImagenes(item); // Procesar imágenes
           this.limpiarEnlaces(item); // Limpiar enlaces del contenido
         });
-
+  
         console.log(this.noticia); // Depuración: Verificar los datos en la consola
       },
       error: (error) => {
@@ -91,7 +96,8 @@ export class VideojuegosComponent implements OnInit{
   private procesarIconos(game: Game): void {
     if (game.img_icon_url) {
       // Construir la URL completa del ícono utilizando `img_icon_url`
-      game.iconoUrl = `https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/${game.appid}/${game.img_icon_url}.jpg`;
+      game.iconoUrl = `https://steamcdn-a.akamaihd.net/steam/apps/${game.appid}/library_600x900.jpg`;
+      //https://steamcdn-a.akamaihd.net/steam/apps/${game.appid}/library_600x900.jpg
     } else {
       // Usar un ícono predeterminado si no hay `img_icon_url`
       game.iconoUrl = 'assets/img/default-icon.png';
