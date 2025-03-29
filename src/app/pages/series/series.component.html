@@ -1,14 +1,13 @@
-<div class="search-bar">
-    <input type="text" [(ngModel)]="nom" placeholder="Search for a series..." (keyup.enter)="cargarSeries()" />
+<div class="input-container">
+    <input type="text" [(ngModel)]="nom" placeholder="Search for a series..."/>
+    <button class="button" (click)="cargarSeries()">Buscar</button>
 </div>
 <div class="cont" >
-    <div class="card" >
-        
+    <div class="card" >    
           <img src="{{ser.Poster}}" alt="Series Poster" height="300" width="200" />
-        
-        <div class="card__content">
-          <p class="card__title">{{ser.Title}}</p>
-          <p class="card__description">{{ser.Plot}}</p>
-        </div>
-      </div>
+    </div>
+    <div class="desc">
+        <h1 class="card__title">{{ser.Title}}</h1><br>
+        <br><p class="card__description">{{ser.Plot}}</p>
+    </div>
 </div>
