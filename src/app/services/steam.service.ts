@@ -9,7 +9,7 @@ export class SteamService {
   constructor(private http: HttpClient) { }
   
   getSteam(id: string) {
-    const url = `https://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=${id}&count=10&maxlength=1000&format=json&feed=steam`;
+    const url = `https://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=${id}&count=30&maxlength=1000&format=json&feed=steam`;
     return this.http.get<Steam>(url);
   }
 }
