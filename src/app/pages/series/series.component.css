@@ -1,3 +1,14 @@
+.contp{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.sub-container {
+    display: flex; /* Usa flexbox para alinear los elementos horizontalmente */
+    gap: 20px; /* Espacio entre los elementos */
+    justify-content: flex-start; /* Alinea los elementos al inicio */
+    align-items: flex-start; /* Alinea los elementos verticalmente al inicio */
+    margin-top: 20px;
+}
 .card {
     width: 220px;
     height: 320px;
@@ -17,9 +28,15 @@
     box-shadow: 2px 2px 15px #07ff07 inset;
   }
 .cont{
-    display: flex;
-    flex-wrap: wrap;
-    
+    flex-shrink: 0; /* Evita que el contenedor se reduzca */
+}
+.desc{
+    flex-grow: 1; /* Permite que el contenedor crezca */
+    color: #e8e8e8;
+}
+
+.Title{
+    display: inline-flex;
 }
 /* From Uiverse.io by Smit-Prajapati */ 
 .input-container {
@@ -72,7 +89,35 @@
     background: linear-gradient(135deg, rgb(0, 237, 79) 50%, rgb(131, 244, 2) 100%);
     box-shadow: 0px 0px 100px rgba(0, 237, 79, 0.5), 0px 0px 100px rgba(131, 244, 2, 0.5);
   }
-  
+  /* Media queries for smaller screens */
+@media (max-width: 768px) {
+    .sub-container {
+        flex-direction: column; /* Cambia a diseño vertical */
+        align-items: center; /* Centra los elementos */
+        gap: 10px; /* Reduce el espacio entre elementos */
+    }
+
+    .card {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        height: auto; /* Ajusta la altura automáticamente */
+    }
+
+    .desc {
+        text-align: center; /* Centra el texto */
+        padding: 10px;
+    }
+
+    .input-container {
+        flex-direction: column; /* Cambia a diseño vertical */
+        gap: 10px; /* Reduce el espacio entre el input y el botón */
+    }
+
+    .input-container input,
+    .input-container button {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        border-radius: 0.8rem; /* Ajusta los bordes redondeados */
+    }
+}
   @media (max-width: 500px) {
     .input-container {
       flex-direction: column;
@@ -86,4 +131,7 @@
       padding: 1rem;
       border-radius: 0.8rem;
     }
+  }
+  .calif{
+    color: aqua;
   }  

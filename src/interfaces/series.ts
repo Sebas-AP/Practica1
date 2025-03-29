@@ -1,5 +1,4 @@
 export interface SeriesResult {
-[x: string]: any;
   Title: string;
   Year: string;
   Rated: string;
@@ -20,10 +19,7 @@ export interface SeriesResult {
   imdbVotes: string;
   imdbID: string;
   Type: string;
-  DVD: string;
-  BoxOffice: string;
-  Production: string;
-  Website: string;
+  totalSeasons: string;
   Response: string;
 }
 

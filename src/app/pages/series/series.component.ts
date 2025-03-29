@@ -9,8 +9,8 @@ import { SeriesResult } from '../../../interfaces/series';
   styleUrl: './series.component.css',
 })
 export class SeriesComponent implements OnInit {
-  ser!: SeriesResult ; // Cambiado a un array para manejar múltiples resultados
-  nom: string = 'none';
+  ser: any=null ; // Cambiado a un array para manejar múltiples resultados
+  nom: string = '';
 
   constructor(private seriesService: SeriesService) {}
 
@@ -19,8 +19,10 @@ export class SeriesComponent implements OnInit {
   }
 
   cargarSeries() {
-    this.seriesService.getSeries(this.nom).subscribe((result: SeriesResult) => {
-      this.ser = result; // Asigna el array de resultados
-    });
+    if (this.nom.trim() !== '') {
+      this.seriesService.getSeries(this.nom).subscribe((result: any) => {
+        this.ser = result; // Asigna los datos obtenidos del servicio
+      });
+    }
   }
 }

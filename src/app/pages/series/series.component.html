@@ -1,13 +1,40 @@
 <div class="input-container">
-    <input type="text" [(ngModel)]="nom" placeholder="Search for a series..."/>
+    <input type="text" [(ngModel)]="nom" placeholder="Search for a series..." (keyup.enter)="cargarSeries()"/>
     <button class="button" (click)="cargarSeries()">Buscar</button>
 </div>
-<div class="cont" >
-    <div class="card" >    
-          <img src="{{ser.Poster}}" alt="Series Poster" height="300" width="200" />
+<div *ngIf="ser" class="contp">
+    <div class="sub-container">
+        <div class="cont" >
+            <div class="card" >    
+                  <img src="{{ser.Poster}}" alt="Series Poster" height="300" width="200" />
+            </div>
+        </div>
+        <div class="desc">
+            <h1 class="card__title" class="Title">{{ser.Title}}</h1><br>
+            <h2>Description</h2>
+            <br><p class="card__description">{{ser.Plot}}</p>
+            <h2>Rating</h2>
+            <h3 class="calif">{{ser.imdbRating}}</h3>
+            <h2>Rated</h2>
+            <h3 class="calif">{{ser.Rated}}</h3>
+            <h2>Genre</h2>
+            <h3 class="calif">{{ser.Genre}}</h3>
+        </div>
     </div>
-    <div class="desc">
-        <h1 class="card__title">{{ser.Title}}</h1><br>
-        <br><p class="card__description">{{ser.Plot}}</p>
+    <div class="cont2">
+        <div class="extras">
+            <h2>Actors</h2>
+            <p>{{ser.Actors}}</p>
+            <h2>Writer</h2>
+            <p>{{ser.Writer}}</p>
+            <h2>Awards</h2>
+            <p>{{ser.Awards}}</p>
+            <h2>Year</h2>
+            <p>{{ser.Year}}</p>
+            <h2>Language</h2>   
+            <p>{{ser.Language}}</p>
+            <h2>Seasons</h2>
+            <p>{{ser.totalSeasons}}</p>
+        </div>
     </div>
 </div>
