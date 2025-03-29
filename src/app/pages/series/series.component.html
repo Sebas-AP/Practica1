@@ -1,1 +1,14 @@
-<p>series works!</p>
+<div class="search-bar">
+    <input type="text" [(ngModel)]="nom" placeholder="Search for a series..." (keyup.enter)="cargarSeries()" />
+</div>
+<div class="cont" >
+    <div class="card" >
+        
+          <img src="{{ser.Poster}}" alt="Series Poster" height="300" width="200" />
+        
+        <div class="card__content">
+          <p class="card__title">{{ser.Title}}</p>
+          <p class="card__description">{{ser.Plot}}</p>
+        </div>
+      </div>
+</div>

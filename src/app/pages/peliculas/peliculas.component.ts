@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-peliculas',
-  imports: [],
+  standalone:false,
+  // selector: 'app-peliculas',
   templateUrl: './peliculas.component.html',
   styleUrl: './peliculas.component.css'
 })

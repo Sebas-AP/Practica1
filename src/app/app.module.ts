@@ -7,9 +7,14 @@ import { HeaderComponent } from './shared/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { VideojuegosComponent } from './pages/videojuegos/videojuegos.component';
+import { SeriesComponent } from './pages/series/series.component';
+
 @NgModule({
-  declarations: [AppComponent, HeaderComponent,FooterComponent,NotfoundComponent,],
-  imports: [CommonModule, BrowserModule, AppRoutingModule],
+  declarations: [AppComponent, HeaderComponent,FooterComponent,NotfoundComponent,VideojuegosComponent,HomeComponent,SeriesComponent,],
+  imports: [CommonModule, BrowserModule,FormsModule, AppRoutingModule,HttpClientModule, ],
 
   bootstrap: [AppComponent],
 })
