@@ -7,6 +7,7 @@ import { MusicaComponent } from './pages/musica/musica.component';
 import { PeliculasComponent } from './pages/peliculas/peliculas.component';
 import { VideojuegosComponent } from './pages/videojuegos/videojuegos.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
+import { TeamComponent } from './pages/team/team.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'musica', component: MusicaComponent },
   { path: 'peliculas', component: PeliculasComponent },
   { path: 'videojuegos', component: VideojuegosComponent },
+  { path: 'team', component: TeamComponent },
   { path: '**', component: NotfoundComponent },
 ];
 @NgModule({

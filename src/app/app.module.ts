@@ -11,9 +11,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { VideojuegosComponent } from './pages/videojuegos/videojuegos.component';
 import { SeriesComponent } from './pages/series/series.component';
+import { TeamComponent } from './pages/team/team.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent,FooterComponent,NotfoundComponent,VideojuegosComponent,HomeComponent,SeriesComponent,],
+  declarations: [AppComponent, HeaderComponent,FooterComponent,NotfoundComponent,VideojuegosComponent,HomeComponent,SeriesComponent,TeamComponent,],
   imports: [CommonModule, BrowserModule,FormsModule, AppRoutingModule,HttpClientModule, ],
 
   bootstrap: [AppComponent],
