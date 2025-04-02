@@ -20,9 +20,12 @@ const routes: Routes = [
   { path: 'team', component: TeamComponent },
   { path: '**', component: NotfoundComponent },
 ];
+
 @NgModule({
   declarations: [],
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
+
 export class AppRoutingModule {}
+ 
