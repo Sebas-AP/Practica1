@@ -1,1 +1,32 @@
-<p>peliculas works! por parte de Tris24</p>
+<h1>Peliculas</h1>
+        
+<div class="input-container">
+    <input type="text" [(ngModel)]="pelimovies" />
+    <button class="button" value="Consultar" (click)="Mov()">Buscar</button>
+    
+</div>
+
+<div class="card">        
+<article>
+<div class="row">
+    <div class="pelicula" > 
+        <h2>{{pel.Title}}</h2>   
+        <img src="{{pel.Poster}}" alt="Imagen de {{pel.Title}}">
+        <p>Género: {{pel.Genre}}</p>
+        <p>Sinopsis: {{pel.Plot}}</p>
+        <p>Duración: {{pel.Runtime}}</p>
+        <p>Fecha de lanzamiento: {{pel.Released}}</p>
+        <p>País: {{pel.Country}}</p>
+        <p>Director: {{pel.Director}}</p>
+        <p>Escritor: {{pel.Writer}}</p>
+        <p> Actores: {{pel.Actors}}</p>                
+        <p>Premios: {{pel.Awards}}</p>
+        <p>Clasificación: {{pel.Rated}}</p>
+        <p>Calificación: {{pel.imdbRating}}</p>
+        <p>Calificación de votos: {{pel.imdbVotes}}</p>
+        
+    </div>
+</div>
+</article>
+</div>
+

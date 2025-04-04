@@ -1,0 +1,189 @@
+/* Contenedor de entrada y botón */
+.input-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    background: linear-gradient(135deg, #23272f 0%, #14161a 100%);
+    border-radius: 1rem;
+    box-shadow: 10px 10px 20px #0e1013, -10px -10px 40px #383e4b;
+    padding: 0.3rem;
+    gap: 0.3rem;
+  }
+  
+  .input-container input {
+    border-radius: 0.8rem 0 0 0.8rem;
+    background: #23272f;
+    box-shadow: inset 5px 5px 10px #0e1013, inset -5px -5px 10px #383e4b,
+      0px 0px 100px rgba(255, 212, 59, 0), 0px 0px 100px rgba(255, 102, 0, 0);
+    width: 100%;
+    flex-basis: 75%;
+    padding: 1rem;
+    border: none;
+    border: 1px solid transparent;
+    color: white;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .input-container input:focus {
+    border: 1px solid #69ff3b;
+    outline: none;
+    box-shadow: inset 0px 0px 10px rgba(0, 237, 79, 0.5),
+      inset 0px 0px 10px rgba(0, 237, 79, 0.5),
+      0px 0px 100px rgba(131, 244, 2, 0.5), 0px 0px 100px rgba(255, 102, 0, 0.5);
+  }
+  
+  .input-container button {
+    flex-basis: 25%;
+    padding: 1rem;
+    background: linear-gradient(
+      135deg,
+      rgb(0, 237, 79) 0%,
+      rgb(131, 244, 2) 100%
+    );
+    box-shadow: 0px 0px 1px rgba(0, 237, 79, 0.5),
+      0px 0px 1px rgba(131, 244, 2, 0.5);
+    font-weight: 900;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    color: #23272f;
+    border: none;
+    width: 100%;
+    border-radius: 0 1rem 1rem 0;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .input-container button:hover {
+    background: linear-gradient(
+      135deg,
+      rgb(0, 237, 79) 50%,
+      rgb(131, 244, 2) 100%
+    );
+    box-shadow: 0px 0px 100px rgba(0, 237, 79, 0.5),
+      0px 0px 100px rgba(131, 244, 2, 0.5);
+  }
+  
+  /* Estilo general para el artículo */
+  article {
+    padding: 20px;
+    background-color: #303030;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+  }
+  
+
+  /* Estilo para cada tarjeta de película */
+  .pelicula {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Estilo para la imagen */
+  .pelicula img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Estilo para los párrafos */
+  .pelicula p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Estilo para los títulos */
+  .pelicula h2 {
+    font-size: 24px;
+    color: #444;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  /* Estilo para enlaces */
+  .pelicula a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .pelicula a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Diseño responsivo */
+  @media (max-width: 768px) {
+    .pelicula {
+      padding: 15px;
+    }
+  
+    .pelicula img {
+      max-width: 100%;
+    }
+  
+    .pelicula p {
+      font-size: 14px;
+    }
+  }
+  
+  /* Estilo para la tarjeta interactiva */
+  .card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 237, 79, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  
+  .card::before,
+  .card::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: rgb(0, 237, 79);
+    transition: all 0.5s;
+  }
+  
+  .card::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
+  }
+  
+  .card::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100% 0 15px;
+  }
+  
+  .card:hover::before,
+  .card:hover::after {
+    width: 20%;
+    height: 20%;
+    border-radius: 15px;
+    transition: all 0.5s;
+  }
