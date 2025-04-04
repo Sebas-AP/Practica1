@@ -4,7 +4,7 @@
     max-width: 900px; /* Aumentar el ancho máximo del contenedor */
     margin: 0 auto;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #010102;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
@@ -12,7 +12,7 @@
   /* Título principal */
   .steam-container h1 {
     text-align: center;
-    color: #333;
+    color: #26d48c;
     margin-bottom: 20px;
   }
   
@@ -28,7 +28,7 @@
   .input-container label {
     font-size: 14px;
     font-weight: bold;
-    color: #555;
+    color: #ffffff;
   }
   
   .input-container input {
@@ -71,19 +71,19 @@
     padding: 20px; /* Aumentar el padding para hacer las tarjetas más grandes */
     border: 1px solid #ddd;
     border-radius: 10px; /* Hacer los bordes más redondeados */
-    background-color: #fff;
+    background-color: #333333;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aumentar la sombra */
   }
   
   li h3 {
     margin: 0 0 10px;
-    color: #007bff;
+    color: #26d48c;
     font-size: 20px; /* Aumentar el tamaño del título */
   }
   
   li p {
     margin: 5px 0;
-    color: #555;
+    color: #ffffff;
     font-size: 16px; /* Aumentar el tamaño del texto */
   }
   
@@ -96,7 +96,7 @@
   }
   
   li a {
-    color: #007bff;
+    color: #26d48c;
     text-decoration: none;
     font-weight: bold;
   }
@@ -133,7 +133,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #fff;
+    background: #010102;
     padding: 10px;
     border-radius: 10px;
   }
@@ -201,7 +201,7 @@
     text-align: center;
     font-size: 24px;
     font-weight: bold;
-    color: #333;
+    color: #ffffff;
     margin-bottom: 20px;
   }
 
