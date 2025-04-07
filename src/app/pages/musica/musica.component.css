@@ -1,0 +1,470 @@
+
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin: 25px;
+  width: 95%; /* Abarca todo el ancho */
+  box-sizing: border-box; /* Asegura que el padding no exceda el ancho */
+}
+
+.input {
+  flex: 1; /* Ocupa todo el espacio disponible */
+  min-height: 50px;
+  padding: 0 1rem;
+  color: #070000;
+  font-size: 15px;
+  border: 1px solid #5e4dcd;
+  border-radius: 6px 0 0 6px;
+  background-color: transparent;
+}
+
+.button--submit {
+  min-height: 50px;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  background-color: #5e4dcd;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button--submit:hover {
+  background-color: #5e5dcd;
+}
+
+.input:focus,
+.input:focus-visible {
+  border-color: #3898EC;
+  outline: none;
+}
+
+/* Media query para dispositivos más pequeños */
+@media (max-width: 768px) {
+  .input-group {
+    flex-direction: column; /* Cambia a diseño vertical */
+  }
+
+  .input {
+    border-radius: 6px; /* Ajusta bordes para diseño vertical */
+    margin-bottom: 10px; /* Espaciado entre input y botón */
+  }
+
+  .button--submit {
+    border-radius: 6px; /* Ajusta bordes para diseño vertical */
+  }
+}
+
+
+
+/* artista */
+
+/* From Uiverse.io by dzoshi */ 
+.artista{
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  box-sizing: border-box;
+  margin-bottom: 50px;
+}
+
+.card {
+  position: relative;
+  width:300px;
+  height: 400px;
+  background: linear-gradient(-45deg, #161616 0%, #000000 100%);
+  color: #81818144;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 14px;
+  gap: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  
+
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: 0;
+  margin: auto;
+  width: 190px;
+  height: 260px;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #ff0000 0%, #d80000 40%);
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.8s cubic-bezier(0.175, 0.95, 0.9, 1.275);
+  box-shadow: 0px 20px 30px hsla(0, 0%, 0%, 0.521);
+}
+
+.card::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  width: 165px;
+  height: 245px;
+  background: linear-gradient(-45deg, #fc0000 0%, #f00000 100%);
+  transform: translate3d(0, 0, 0) scale(0.45);
+}
+
+.heading {
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 900;
+}
+
+.card p:not(.heading) {
+  font-size: 18px;
+}
+
+.card p:last-child {
+  color: #fa0000;
+  font-weight: 900;
+}
+
+.card:hover::after {
+  transition: all 0.2s cubic-bezier(0.175, 0.285, 0.82, 1.275);
+}
+
+.card:hover::before {
+  transform: scaleX(1.02) scaleY(1.02);
+  box-shadow: 0px 0px 30px 0px hsla(0, 100%, 50%, 0.356);
+}
+
+/* albumes*/
+
+/* Carrusel para la clase albumes */
+.albumes {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden; /* Oculta los elementos fuera del contenedor */
+  width: 100%;
+  height: auto;
+  margin-bottom: 50px;
+}
+
+.albumes section {
+  display: flex;
+  overflow-x: auto; /* Permite el desplazamiento horizontal */
+  scroll-behavior: smooth; /* Suaviza el desplazamiento */
+  gap: 20px; /* Espaciado entre los artículos */
+}
+
+.albumes article {
+  flex: 0 0 auto; /* Evita que los artículos se reduzcan */
+  width: 200px; /* Ancho fijo para cada artículo */
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.albumes img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.albumes audio {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.albumes a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #5e4dcd;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.albumes a:hover {
+  text-decoration: underline;
+}
+
+/* Botones de navegación */
+.btn-prev,
+.btn-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.btn-prev {
+  left: 10px;
+}
+
+.btn-next {
+  right: 10px;
+}
+
+.btn-prev:hover,
+.btn-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+/* Albumes de lod artistas */
+
+.si {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Cuatro columnas de igual ancho */
+  gap: 20px; /* Espaciado entre los elementos */
+  justify-content: center; /* Centra el grid horizontalmente */
+  margin: 20px auto; /* Margen superior e inferior y centrado automático */
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  margin-bottom: 50px;
+}
+
+.si article {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.si article:hover {
+  transform: scale(1.05); /* Efecto de zoom al pasar el cursor */
+}
+
+.si img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.si h4 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.si p {
+  font-size: 14px;
+  color: #555;
+}
+
+.si a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #5e4dcd;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.si a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+.select {
+  display: flex;
+  align-items: center;
+  margin: 25px;
+  width: 95%; /* Abarca todo el ancho */
+  box-sizing: border-box; /* Asegura que el padding no exceda el ancho */
+}
+
+.select select {
+  flex: 1; /* Ocupa todo el espacio disponible */
+  min-height: 50px;
+  padding: 0 1rem;
+  color: #070000;
+  font-size: 15px;
+  border: 1px solid #5e4dcd;
+  border-radius: 6px;
+  background-color: transparent;
+  appearance: none; /* Oculta el estilo predeterminado del navegador */
+  cursor: pointer;
+}
+
+.select select:focus,
+.select select:focus-visible {
+  border-color: #3898EC;
+  outline: none;
+}
+
+.select label {
+  margin-right: 10px; /* Espaciado entre el label y el select */
+  font-size: 15px;
+  color: #070000;
+}
+
+
+
+
+
+/* From Uiverse.io by Creatlydev */ 
+.cancion {
+  display: flex;
+  flex-direction: column; /* Asegura que los elementos estén en columna */
+  align-items: center; /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente */
+  text-align: center; /* Centra el texto dentro de los elementos */
+  margin: 40px auto; /* Aumenta el margen superior e inferior */
+  width: 100%; /* Asegura que ocupe todo el ancho disponible */
+  max-width: 1200px; /* Aumenta el ancho máximo */
+  padding: 20px; /* Agrega espacio interno */
+
+  border-radius: 10px; /* Bordes redondeados */
+  background-color: #f9f9f9; /* Fondo claro */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+}
+
+.car {
+  width: 100%; /* Abarca todo el ancho del contenedor padre */
+  max-width: 100%; /* Asegura que no exceda el ancho del contenedor padre */
+  background-color: #fefefe;
+  border-radius: 1rem;
+  padding: 1rem; /* Aumenta el espacio interno */
+  color: #141417;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+}
+
+.card__hero {
+  background-color: #fef4e2;
+  border-radius: 0.5rem 0.5rem 0 0;
+  padding: 1.5rem;
+  font-size: 0.875rem;
+}
+
+.card__hero-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  font-weight: 700;
+}
+.card__footer {
+  display: flex;
+  flex-direction: column; /* Cambia a diseño en columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: center; /* Centra los elementos verticalmente */
+  padding: 1.5rem; /* Espaciado interno */
+  font-weight: 700;
+  font-size: 1rem; /* Tamaño de fuente */
+  height: auto; /* Permite que crezca dinámicamente */
+  background-color: #f3f3f3; /* Fondo claro */
+  border-top: 2px solid #5e4dcd; /* Borde superior */
+  gap: 1rem; /* Espaciado entre los elementos */
+}
+
+@media (min-width: 340px) {
+  .card__footer {
+    flex-direction: column; /* Asegura que siga siendo una columna en pantallas grandes */
+  }
+}
+
+.card__job-summary {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0.75rem;
+}
+.card__btn {
+  width: 100%;
+  font-weight: 400;
+  border: none;
+  display: block;
+  cursor: pointer;
+  text-align: center;
+  padding: 0.5rem 1.25rem;
+  border-radius: 1rem;
+  background-color: #141417;
+  color: #fff;
+  font-size: 1rem;
+}
+@media (min-width: 340px) {
+  .card__btn {
+    width: max-content;
+  }
+}
+
+
+.card__job-title {
+  width: 100%; /* Abarca todo el ancho del contenedor */
+  margin: 20px 0; /* Espaciado superior e inferior */
+  border: none; /* Elimina bordes adicionales */
+  display: block; /* Asegura que el elemento sea un bloque */
+}
+
+.card__job {
+  width: 100%; /* Abarca todo el ancho del contenedor */
+  display: block; /* Asegura que el elemento sea un bloque */
+  text-align: center; /* Centra el contenido dentro del elemento */
+  margin: 0 auto; /* Centra el elemento si es necesario */
+}
+
+/* Estilos responsivos adicionales */
+
+/* Ajuste para dispositivos muy pequeños */
+@media (max-width: 480px) {
+  .input-group {
+    flex-direction: column; /* Asegura diseño en columna */
+    align-items: stretch; /* Los elementos ocupan todo el ancho */
+  }
+
+  .input {
+    margin-bottom: 10px; /* Espaciado extra entre input y botón */
+  }
+
+  .button--submit {
+    width: 100%; /* El botón abarca todo el ancho */
+    border-radius: 6px; /* Mantiene bordes redondeados */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%; /* Abarca todo el ancho del contenedor */
+    height: auto; /* Ajuste dinámico del alto */
+  }
+
+  .albumes article {
+    width: 100%; /* Asegura que se adapten al contenedor */
+    flex: 1; /* Flexibilidad en el ancho */
+  }
+
+  .si {
+    grid-template-columns: 1fr; /* Cambia a una columna en pantallas pequeñas */
+  }
+
+  .cancion,
+  .car {
+    padding: 10px; /* Reduce padding para dispositivos pequeños */
+  }
+
+  .card__btn {
+    font-size: 0.8rem; /* Ajuste del texto en botones */
+    padding: 0.5rem 1rem; /* Reduce el espacio interno */
+  }
+}
