@@ -1,1 +1,115 @@
-<p>musica works!</p>
+<div class="input-group">
+  <input type="email" class="input" id="Email" name="Email" [(ngModel)]="art" type="text">
+  <input class="button--submit" (click)="cargarNew(); cargarArtist(); cargarAlbum(); cargarTrack(); cargarCancion()" type="button" value="Consultar">
+</div>
+
+
+<div class="artista">
+  <!-- From Uiverse.io by dzoshi --> 
+  <div class="card">
+    <div class="heading">
+      <img src="{{arti.data[0].picture_big}}" alt="">
+      <p>{{arti.data[0].name}}</p>
+      
+    </div>
+  </div>
+  <!--<p>Albums:</p>
+    <p>{{arti.data[0].nb_album}}</p>
+    <p>Fans:</p>
+    <p>{{arti.data[0].nb_fan}}</p>-->
+</div>
+
+
+<div class="albumes">
+  <button class="btn-prev" (click)="scrollLeft()">&#8249;</button>
+  <section>
+    <article *ngFor="let article of articles.data">
+      <img src="{{article.album.cover_big}}" alt="">
+      <h4>{{article.title}}</h4>
+      <p>{{article.album.title}}</p>
+      <audio controls src="{{article.preview}}"></audio>
+      <a href="{{article.link}}">Escucha!</a>
+    </article>
+  </section>
+  <button class="btn-next" (click)="scrollRight()">&#8250;</button>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="si">
+  <article *ngFor="let al of alal.data">
+    <img src="{{al.cover_big}}" alt="">
+    <h4>{{al.title}}</h4>
+    <p>Cnciones: {{al.nb_tracks}}</p>
+    <p>Tipo de album: {{al.record_type}}</p>
+    <a href="{{al.link}}">Escuchar aqui</a>
+  </article>
+</div>
+
+
+
+
+<div class="select">
+  <select [(ngModel)]="selectedTrack" (change)="mostrarTrack()">
+    <option *ngFor="let opcion of trtr.data" [ngValue]="opcion">{{opcion.title}}</option>
+  </select>
+</div>
+
+
+
+
+<!-- <div>
+  <div *ngIf="trackSeleccionado">
+    <img src="{{trackSeleccionado.album.cover_big}}" alt="">
+    <p><strong>Título:</strong> {{trackSeleccionado.title}}</p>
+
+
+    <p><strong>Duración:</strong> {{trackSeleccionado.duration}} segundos</p>
+    <p><strong>Artista:</strong> {{trackSeleccionado.artist.name}}</p>
+    <p><strong>Álbum:</strong> {{trackSeleccionado.album.title}}</p>
+    <audio controls [src]="trackSeleccionado.preview"></audio>
+    <a [href]="trackSeleccionado.link" target="_blank">Escucha completa</a>
+  </div>
+</div> -->
+
+
+
+<div class="cancion">
+  <div *ngIf="trackSeleccionado">
+    <article class="car">
+      <section class="card__hero">
+        <header class="card__hero-header">
+          <p><strong>Título:</strong> {{trackSeleccionado.title}}</p>
+        </header>
+        <img src="{{trackSeleccionado.album.cover_big}}" alt="">
+      </section>
+      <footer class="card__footer">
+        <div class="card__job-summary">
+          <div class="card__job">
+            <audio class="card__job-title" controls [src]="trackSeleccionado.preview"></audio>
+            <p><strong>Duración:</strong> {{trackSeleccionado.duration}} segundos</p>
+            <p><strong>Artista:</strong> {{trackSeleccionado.artist.name}}</p>
+            <p><strong>Álbum:</strong> {{trackSeleccionado.album.title}}</p>
+          </div>
+        </div>
+
+      </footer>
+    </article>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
