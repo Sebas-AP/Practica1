@@ -6,10 +6,10 @@ import { datos_Peliculas } from '../../../interfaces/peliculas'; // Adjust the p
 @Component({
   selector: 'app-peliculastri',
   standalone: false,
-  templateUrl: './peliculastri.component.html',
-  styleUrl: './peliculastri.component.css'
+  templateUrl: './peliculas.component.html',
+  styleUrl: './peliculas.component.css'
 })
-export class peliculas implements OnInit {
+export class PeliculasComponent implements OnInit {
   pel!: datos_Peliculas;
   
   pelimovies: string = "";

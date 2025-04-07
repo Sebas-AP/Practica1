@@ -12,9 +12,11 @@ import { FormsModule } from '@angular/forms';
 import { VideojuegosComponent } from './pages/videojuegos/videojuegos.component';
 import { SeriesComponent } from './pages/series/series.component';
 import { TeamComponent } from './pages/team/team.component';
+import { PeliculasComponent } from './pages/peliculas/peliculas.component';
+import { MusicaComponent } from './pages/musica/musica.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent,FooterComponent,NotfoundComponent,VideojuegosComponent,HomeComponent,SeriesComponent,TeamComponent,],
+  declarations: [AppComponent, HeaderComponent,FooterComponent,NotfoundComponent,VideojuegosComponent,MusicaComponent,HomeComponent,SeriesComponent,TeamComponent,PeliculasComponent,],
   imports: [CommonModule, BrowserModule,FormsModule, AppRoutingModule,HttpClientModule, ],
 
   bootstrap: [AppComponent],
