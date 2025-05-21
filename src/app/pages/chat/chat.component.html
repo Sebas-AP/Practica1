@@ -1,1 +1,32 @@
-<p>chat works!</p>
+<div class="chat-container">
+  <h2>AI Recommendation Assistant</h2>
+  <p class="description">Tell me what kind of movies, books, music, series, or games you like, and I'll recommend something similar!</p>
+  
+  <div class="input-group">
+    <input 
+      type="text" 
+      [formControl]="userInput"
+      placeholder="Example: 'I want sci-fi movies like Blade Runner'"
+      (keyup.enter)="getRecommendations()"
+    >
+    <button (click)="getRecommendations()" [disabled]="isLoading">
+      {{ isLoading ? 'Searching...' : 'Get Recommendations' }}
+    </button>
+    <button class="clear-btn" (click)="clearChat()">Clear</button>
+  </div>
+
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+
+  <div *ngIf="isLoading" class="loading-spinner">
+    <div class="spinner"></div>
+  </div>
+
+  <div *ngIf="recommendations.length > 0" class="recommendations">
+    <h3>Recommendations:</h3>
+    <div *ngFor="let item of recommendations" class="recommendation-item">
+      {{ item }}
+    </div>
+  </div>
+</div>

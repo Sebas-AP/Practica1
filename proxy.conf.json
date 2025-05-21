@@ -1,0 +1,8 @@
+{
+  "/api": {
+    "target": "https://api.deepseek.com",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": { "^/api": "" }
+  }
+}

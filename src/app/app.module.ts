@@ -14,10 +14,34 @@ import { SeriesComponent } from './pages/series/series.component';
 import { TeamComponent } from './pages/team/team.component';
 import { PeliculasComponent } from './pages/peliculas/peliculas.component';
 import { MusicaComponent } from './pages/musica/musica.component';
-
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { ChatComponent } from './pages/chat/chat.component';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
-  declarations: [AppComponent, HeaderComponent,FooterComponent,NotfoundComponent,VideojuegosComponent,MusicaComponent,HomeComponent,SeriesComponent,TeamComponent,PeliculasComponent,],
-  imports: [CommonModule, BrowserModule,FormsModule, AppRoutingModule,HttpClientModule, ],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    NotfoundComponent,
+    VideojuegosComponent,
+    MusicaComponent,
+    HomeComponent,
+    SeriesComponent,
+    TeamComponent,
+    PeliculasComponent,
+    LoginComponent,
+    RegisterComponent,
+  ],
+  imports: [
+    ChatComponent,
+    CommonModule,
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+  ],
 
   bootstrap: [AppComponent],
 })
