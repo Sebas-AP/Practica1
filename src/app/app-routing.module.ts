@@ -8,7 +8,9 @@ import { PeliculasComponent } from './pages/peliculas/peliculas.component';
 import { VideojuegosComponent } from './pages/videojuegos/videojuegos.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { TeamComponent } from './pages/team/team.component';
-
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { ChatComponent } from './pages/chat/chat.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: '', pathMatch: 'full', redirectTo: 'home' },
@@ -18,6 +20,9 @@ const routes: Routes = [
   { path: 'peliculas', component: PeliculasComponent },
   { path: 'videojuegos', component: VideojuegosComponent },
   { path: 'team', component: TeamComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'chat', component: ChatComponent },
   { path: '**', component: NotfoundComponent },
 ];
 
