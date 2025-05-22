@@ -1,1 +1,70 @@
-<p>register works!</p>
+<div class="body">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="featured-boxes">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="featured-box featured-box-primary text-left mt-5">
+                                <div class="box-content">
+                                    <h4 class="heading-primary text-uppercase mb-3">Registra Tu Cuenta</h4>
+                                    <form class="form" [formGroup]="formularioValidacion" (ngSubmit)="alta()">
+                                        <div class="form-row">
+                                            <div class="form-group col">
+                                                <label>Nombre</label>
+                                                <input formControlName="nombre"  type="text" value="" class="form-control form-control-lg">
+                                                <span *ngIf="this.formularioValidacion.get('nombre')?.errors?.['minlength']">
+                                                    ( minimo 10 caracteres )
+                                                </span>
+                                                <span *ngIf="this.formularioValidacion.get('nombre')?.errors?.['required']">
+                                                    ( Coloque un nombre )
+                                                </span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-row">
+                                            <div class="form-group col">
+                                                <label>Direccion E-mail </label>
+                                                <input formControlName="correo" type="text" value="" class="form-control form-control-lg">
+                                                <span   *ngIf="this.formularioValidacion.get('correo')?.errors?.['required']">
+                                                    (Coloque su E-mail)
+                                                </span> 
+                                                <span [ngClass]="miClase" *ngIf="this.formularioValidacion.get('correo')?.errors?.['email']">
+                                                    (El E-mail tiene formato invalido )
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-lg-6">
+                                                <label>Contraseña</label>
+                                                <input formControlName="password" type="password" value="" class="form-control form-control-lg">
+                                            </div>
+                                            <div class="form-group col-lg-6">
+                                                <label>Reingresar contraseña</label>
+                                                <input formControlName="repassword" type="password" value="" class="form-control form-control-lg">
+                                            </div>
+                                            <span *ngIf="this.formularioValidacion.get('repassword')?.errors?.['passwordMismatched']">
+                                                ( Las contraseñas no coinciden )
+                                            </span>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col">
+                                                <input type="submit" value="Registrarse" class="btn btn-primary float-right mb-5" data-loading-text="Loading...">
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div>
+                                        {{resultado}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

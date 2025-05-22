@@ -1,0 +1,82 @@
+.container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+
+    min-height: 100vh; /* Asegura que el contenedor ocupe al menos toda la altura de la ventana */
+    padding: 20px; /* Opcional: añade un poco de espacio alrededor del contenido */
+
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho/alto total */
+  }
+  
+  .row {
+    width: 100%; /* Asegura que la fila ocupe todo el ancho del contenedor */
+    max-width: 1500px; /* Opcional: limita el ancho máximo para evitar que el contenido se estire demasiado */
+  }
+  
+  .col {
+    width: 100%; /* Asegura que la columna ocupe todo el ancho de la fila */
+  }
+  
+  .featured-boxes {
+    width: 100%; /* Asegura que el contenedor de las cajas ocupe todo el ancho de la columna */
+  }
+  
+  .col-md-6 {
+    width: 100%; /* Asegura que la columna ocupe todo el ancho de la fila en pantallas medianas y más grandes */
+    max-width: 50%; /* Limita el ancho al 50% en pantallas medianas y más grandes */
+    margin: 0 auto;/*center the col-md-6*/
+  }
+  
+  .featured-box {
+    width: 100%; /* Asegura que la caja ocupe todo el ancho de la columna */
+  }
+  
+  .box-content {
+    width: 100%; /* Asegura que el contenido de la caja ocupe todo el ancho de la caja */
+  }
+  
+  .form-row {
+    width: 100%; /* Asegura que la fila del formulario ocupe todo el ancho */
+  }
+  
+  .form-group {
+    width: 100%; /* Asegura que el grupo del formulario ocupe todo el ancho */
+  }
+  
+  .col-lg-6 {
+    width: 100%; /* Asegura que la columna ocupe todo el ancho de la fila en pantallas grandes y más grandes */
+  }
+  
+  /* Opcional: estilos adicionales para la apariencia */
+  .featured-box-primary {
+    border: 1px solid #ccc;
+    padding: 00px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-control {
+    width: 100%; /* Asegura que los campos de entrada ocupen todo el ancho */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .form-check-label{
+    display:flex;
+    align-items:center;
+  }

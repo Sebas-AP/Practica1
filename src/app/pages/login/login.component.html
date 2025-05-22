@@ -1,1 +1,36 @@
-<p>login works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="featured-boxes">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="featured-box featured-box-primary text-left mt-5">
+                            <div class="box-content">
+                                <form class="form" (ngSubmit)="iniciarSesion()">
+                                    <div class="form-row">
+                                        <div class="form-group col">
+                                            <label for="email" class="label">E-mail</label>
+                                            <input type="email" name="email" id="email" [(ngModel)]="email" required class="form-control form-control-lg" />
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col">
+                                            <label for="password" class="label">Contrasñea</label>
+                                            <input type="password" name="password" id="password" [(ngModel)]="password" required class="form-control form-control-lg"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-lg-12">
+                                            <input class="submit" type="submit" value="Iniciar Sesion" class="btn btn-primary float-right mb-5" />
+                                            <div *ngIf="mensaje" class="error">{{ mensaje }}</div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
