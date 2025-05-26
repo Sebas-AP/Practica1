@@ -1,4 +1,91 @@
+.nombre {
+  color: #69ff3b important;
+}
+.input-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  background: white;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, #23272f 0%, #14161a 100%);
+  box-shadow: 10px 10px 20px #0e1013, -10px -10px 40px #383e4b;
+  padding: 0.3rem;
+  gap: 0.3rem;
+}
 
+.input-container input {
+  border-radius: 0.8rem 0 0 0.8rem;
+  background: #23272f;
+  box-shadow: inset 5px 5px 10px #0e1013, inset -5px -5px 10px #383e4b,
+    0px 0px 100px rgba(255, 212, 59, 0), 0px 0px 100px rgba(255, 102, 0, 0);
+  width: 100%;
+  flex-basis: 75%;
+  padding: 1rem;
+  border: none;
+  border: 1px solid transparent;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.input-container input:focus {
+  border: 1px solid #69ff3b;
+  outline: none;
+  box-shadow: inset 0px 0px 10px rgba(0, 237, 79, 0.5),
+    inset 0px 0px 10px rgba(0, 237, 79, 0.5),
+    0px 0px 100px rgba(131, 244, 2, 0.5), 0px 0px 100px rgba(255, 102, 0, 0.5);
+}
+
+.input-container button {
+  flex-basis: 25%;
+  padding: 1rem;
+  background: linear-gradient(
+    135deg,
+    rgb(0, 237, 79) 0%,
+    rgb(131, 244, 2) 100%
+  );
+  box-shadow: 0px 0px 1px rgba(0, 237, 79, 0.5),
+    0px 0px 1px rgba(131, 244, 2, 0.5);
+  font-weight: 900;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  color: #23272f;
+  border: none;
+  width: 100%;
+  border-radius: 0 1rem 1rem 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.input-container button:hover {
+  background: linear-gradient(
+    135deg,
+    rgb(0, 237, 79) 50%,
+    rgb(131, 244, 2) 100%
+  );
+  box-shadow: 0px 0px 100px rgba(0, 237, 79, 0.5),
+    0px 0px 100px rgba(131, 244, 2, 0.5);
+}
+.artista_img {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centra verticalmente */
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  /* height: 50%;  <-- Elimina esta línea */
+  width: 100%;
+}
+
+.artista_img img {
+  max-width: 180px;
+  max-height: 180px;
+  width: 100%;
+  height: auto;
+  border-radius: 50%; /* Hace la imagen circular */
+  object-fit: cover;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  border: 4px solid #fff;
+  background: #eee;
+  margin: 0 auto;
+}
 
 .input-group {
   display: flex;
@@ -8,8 +95,8 @@
   box-sizing: border-box; /* Asegura que el padding no exceda el ancho */
 }
 
-.input {
-  flex: 1; /* Ocupa todo el espacio disponible */
+/* .input {
+  flex: 1;  Ocupa todo el espacio disponible 
   min-height: 50px;
   padding: 0 1rem;
   color: #070000;
@@ -39,7 +126,7 @@
 .input:focus-visible {
   border-color: #3898EC;
   outline: none;
-}
+} */
 
 /* Media query para dispositivos más pequeños */
 @media (max-width: 768px) {
@@ -57,21 +144,20 @@
   }
 }
 
-
-
 /* artista */
 
-/* From Uiverse.io by dzoshi */ 
-.artista{
+/* From Uiverse.io by dzoshi */
+.artista {
   display: flex;
   justify-content: center; /* Centra horizontalmente */
   box-sizing: border-box;
-  margin-bottom: 50px;
 }
-
+.artista-section {
+  margin-bottom: 10%;
+}
 .card {
   position: relative;
-  width:300px;
+  width: 300px;
   height: 400px;
   background: linear-gradient(-45deg, #161616 0%, #000000 100%);
   color: #81818144;
@@ -82,8 +168,6 @@
   gap: 10px;
   border-radius: 8px;
   cursor: pointer;
-  
-
 }
 
 .card::before {
@@ -124,7 +208,7 @@
 }
 
 .card p:last-child {
-  color: #fa0000;
+  color: #00fa32;
   font-weight: 900;
 }
 
@@ -161,7 +245,7 @@
   flex: 0 0 auto; /* Evita que los artículos se reduzcan */
   width: 200px; /* Ancho fijo para cada artículo */
   text-align: center;
-  background-color: #f9f9f9;
+  background-color: #f9f9f936;
   border-radius: 10px;
   padding: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -182,7 +266,7 @@
 .albumes a {
   display: inline-block;
   margin-top: 10px;
-  color: #5e4dcd;
+  color: #26ca05;
   text-decoration: none;
   font-weight: bold;
 }
@@ -219,8 +303,6 @@
 .btn-next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
-
-
 
 /* Albumes de lod artistas */
 
@@ -275,13 +357,6 @@
   text-decoration: underline;
 }
 
-
-
-
-
-
-
-
 .select {
   display: flex;
   align-items: center;
@@ -296,7 +371,7 @@
   padding: 0 1rem;
   color: #070000;
   font-size: 15px;
-  border: 1px solid #5e4dcd;
+  border: 1px solid #4dcd60;
   border-radius: 6px;
   background-color: transparent;
   appearance: none; /* Oculta el estilo predeterminado del navegador */
@@ -305,7 +380,7 @@
 
 .select select:focus,
 .select select:focus-visible {
-  border-color: #3898EC;
+  border-color: #3898ec;
   outline: none;
 }
 
@@ -315,11 +390,7 @@
   color: #070000;
 }
 
-
-
-
-
-/* From Uiverse.io by Creatlydev */ 
+/* From Uiverse.io by Creatlydev */
 .cancion {
   display: flex;
   flex-direction: column; /* Asegura que los elementos estén en columna */
@@ -408,7 +479,6 @@
     width: max-content;
   }
 }
-
 
 .card__job-title {
   width: 100%; /* Abarca todo el ancho del contenedor */

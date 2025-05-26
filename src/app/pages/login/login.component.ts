@@ -17,7 +17,7 @@ export class LoginComponent {
 
   iniciarSesion() {
     const datos = { email: this.email, password: this.password };
-    this.http.post('http://localhost/desWeb/Inicio.php', datos).subscribe(
+    this.http.post('http://localhost/entretenia/Inicio.php', datos).subscribe(
       (response: any) => {
         if (response.success) {
           this.router.navigate(['/home']); 

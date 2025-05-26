@@ -8,7 +8,7 @@ export class ClientesService {
 
   constructor(private http: HttpClient) { }
   guardarusuario(usuario: any) {
-    return this.http.post(`http://localhost/desWeb/registroUser.php`, JSON.stringify(usuario));
+    return this.http.post(`http://localhost/entretenia/registroUser.php`, JSON.stringify(usuario));
 
   }
 }

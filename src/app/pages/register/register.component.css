@@ -1,0 +1,98 @@
+/* Fondo general */
+.body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #000001 0%, #24b31a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+/* Contenedor principal */
+.container {
+    background: #595959;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(44, 62, 80, 0.15);
+    padding: 40px 30px;
+    max-width: 500px;
+    margin: auto;
+}
+
+/* Título */
+.heading-primary {
+    color: #3efc25;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+/* Formulario */
+.form {
+    margin-top: 10px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #d1d8e0;
+    padding: 12px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.form-control:focus {
+    border-color: #5bfc25;
+    box-shadow: 0 0 0 2px rgba(37, 117, 252, 0.1);
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #004902 0%, #42fc25 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(90deg, #004902 0%, #42fc25 100%);
+    box-shadow: 0 4px 16px rgba(37, 117, 252, 0.15);
+}
+
+.mt-5 {
+    margin-top: 2rem !important;
+}
+
+.mb-3 {
+    margin-bottom: 1rem !important;
+}
+
+.mb-5 {
+    margin-bottom: 2rem !important;
+}
+
+/* Mensajes de error */
+span[ng-reflect-ng-if] {
+    color: #e74c3c;
+    font-size: 0.95rem;
+    margin-top: 4px;
+    display: block;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 8px;
+    }
+    .heading-primary {
+        font-size: 1.2rem;
+    }
+}

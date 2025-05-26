@@ -1,15 +1,16 @@
-<div class="input-group">
-  <input type="email" class="input" id="Email" name="Email" [(ngModel)]="art" type="text">
-  <input class="button--submit" (click)="cargarNew(); cargarArtist(); cargarAlbum(); cargarTrack(); cargarCancion()" type="button" value="Consultar">
+<div class="input-container">
+  <input type="text" [(ngModel)]="art" placeholder="Buscar artista..." (keyup.enter)="cargarNew(); cargarArtist(); cargarAlbum(); cargarTrack(); cargarCancion()"/>
+  <button class="button" (click)="cargarNew(); cargarArtist(); cargarAlbum(); cargarTrack(); cargarCancion()">Buscar</button>
 </div>
 
 
-<div class="artista">
+<section class="artista-section">
+  <div class="artista">
   <!-- From Uiverse.io by dzoshi --> 
   <div class="card">
     <div class="heading">
-      <img src="{{arti.data[0].picture_big}}" alt="">
-      <p>{{arti.data[0].name}}</p>
+      <img src="{{arti.data[0].picture_big}}" alt="" class="artista_img">
+      <p class="nombre">{{arti.data[0].name}}</p>
       
     </div>
   </div>
@@ -18,6 +19,7 @@
     <p>Fans:</p>
     <p>{{arti.data[0].nb_fan}}</p>-->
 </div>
+</section>
 
 
 <div class="albumes">
@@ -46,7 +48,7 @@
   <article *ngFor="let al of alal.data">
     <img src="{{al.cover_big}}" alt="">
     <h4>{{al.title}}</h4>
-    <p>Cnciones: {{al.nb_tracks}}</p>
+    <p>Canciones: {{al.nb_tracks}}</p>
     <p>Tipo de album: {{al.record_type}}</p>
     <a href="{{al.link}}">Escuchar aqui</a>
   </article>
