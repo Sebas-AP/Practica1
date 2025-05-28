@@ -1,82 +1,104 @@
-.container {
+/* Fondo general */
+body, .login-bg {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #000001 0%, #24b31a 100%);
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+}
 
-    min-height: 100vh; /* Asegura que el contenedor ocupe al menos toda la altura de la ventana */
-    padding: 20px; /* Opcional: añade un poco de espacio alrededor del contenido */
+/* Contenedor principal */
+.container {
+    background: #595959;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(44, 62, 80, 0.15);
+    padding: 40px 30px;
+    max-width: 500px;
+    margin: 40px auto;
+}
 
-    box-sizing: border-box; /* Asegura que el padding no afecte el ancho/alto total */
-  }
-  
-  .row {
-    width: 100%; /* Asegura que la fila ocupe todo el ancho del contenedor */
-    max-width: 1500px; /* Opcional: limita el ancho máximo para evitar que el contenido se estire demasiado */
-  }
-  
-  .col {
-    width: 100%; /* Asegura que la columna ocupe todo el ancho de la fila */
-  }
-  
-  .featured-boxes {
-    width: 100%; /* Asegura que el contenedor de las cajas ocupe todo el ancho de la columna */
-  }
-  
-  .col-md-6 {
-    width: 100%; /* Asegura que la columna ocupe todo el ancho de la fila en pantallas medianas y más grandes */
-    max-width: 50%; /* Limita el ancho al 50% en pantallas medianas y más grandes */
-    margin: 0 auto;/*center the col-md-6*/
-  }
-  
-  .featured-box {
-    width: 100%; /* Asegura que la caja ocupe todo el ancho de la columna */
-  }
-  
-  .box-content {
-    width: 100%; /* Asegura que el contenido de la caja ocupe todo el ancho de la caja */
-  }
-  
-  .form-row {
-    width: 100%; /* Asegura que la fila del formulario ocupe todo el ancho */
-  }
-  
-  .form-group {
-    width: 100%; /* Asegura que el grupo del formulario ocupe todo el ancho */
-  }
-  
-  .col-lg-6 {
-    width: 100%; /* Asegura que la columna ocupe todo el ancho de la fila en pantallas grandes y más grandes */
-  }
-  
-  /* Opcional: estilos adicionales para la apariencia */
-  .featured-box-primary {
-    border: 1px solid #ccc;
-    padding: 00px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .form-control {
-    width: 100%; /* Asegura que los campos de entrada ocupen todo el ancho */
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-  }
-  
-  .btn-primary {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 30px;
+/* Título */
+h1 {
+    color: #3efc25;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+/* Formulario */
+.form {
+    margin-top: 10px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #d1d8e0;
+    padding: 12px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+    background: #f8f8f8;
+}
+
+.form-control:focus {
+    border-color: #5bfc25;
+    box-shadow: 0 0 0 2px rgba(37, 117, 252, 0.1);
+}
+
+.btn-primary,
+input[type="submit"].submit {
+    background: linear-gradient(90deg, #004902 0%, #42fc25 100%);
     border: none;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-  
-  .btn-primary:hover {
-    background-color: #0056b3;
-  }
-  
-  .form-check-label{
-    display:flex;
-    align-items:center;
-  }
+    border-radius: 8px;
+    padding: 12px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    transition: background 0.2s;
+    margin-top: 10px;
+}
+
+.btn-primary:hover,
+input[type="submit"].submit:hover {
+    background: linear-gradient(90deg, #004902 0%, #42fc25 100%);
+    box-shadow: 0 4px 16px rgba(37, 117, 252, 0.15);
+}
+
+.mt-5 {
+    margin-top: 2rem !important;
+}
+
+.mb-3 {
+    margin-bottom: 1rem !important;
+}
+
+.mb-5 {
+    margin-bottom: 2rem !important;
+}
+
+/* Mensajes de error */
+.error, div.error {
+    color: #e74c3c;
+    font-size: 0.95rem;
+    margin-top: 8px;
+    display: block;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 8px;
+    }
+    h1 {
+        font-size: 1.2rem;
+    }
+}

@@ -1,11 +1,13 @@
-<div class="container">
+<body class="login-bg">
+    <div class="container">
     <div class="row">
         <div class="col">
             <div class="featured-boxes">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="featured-box featured-box-primary text-left mt-5">
-                            <div class="box-content">
+                            <div class="box-content" >
+                                <h1>Inicio de sesión</h1>
                                 <form class="form" (ngSubmit)="iniciarSesion()">
                                     <div class="form-row">
                                         <div class="form-group col">
@@ -15,7 +17,7 @@
                                     </div>
                                     <div class="form-row">
                                         <div class="form-group col">
-                                            <label for="password" class="label">Contrasñea</label>
+                                            <label for="password" class="label">Contraseña</label>
                                             <input type="password" name="password" id="password" [(ngModel)]="password" required class="form-control form-control-lg"/>
                                         </div>
                                     </div>
@@ -25,6 +27,7 @@
                                             <div *ngIf="mensaje" class="error">{{ mensaje }}</div>
                                         </div>
                                     </div>
+                                    <span [routerLink]="['/register']">Registrate</span>
                                 </form>
                             </div>
                         </div>
@@ -34,3 +37,4 @@
         </div>
     </div>
 </div>
+</body>

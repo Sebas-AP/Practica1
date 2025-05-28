@@ -317,7 +317,7 @@
 }
 
 .si article {
-  background-color: #f9f9f9;
+  background-color: #3b3a3a;
   border-radius: 10px;
   padding: 10px;
   text-align: center;
@@ -342,13 +342,13 @@
 
 .si p {
   font-size: 14px;
-  color: #555;
+  color: #ffffff;
 }
 
 .si a {
   display: inline-block;
   margin-top: 10px;
-  color: #5e4dcd;
+  color: #46ce66;
   text-decoration: none;
   font-weight: bold;
 }
@@ -403,22 +403,22 @@
   padding: 20px; /* Agrega espacio interno */
 
   border-radius: 10px; /* Bordes redondeados */
-  background-color: #f9f9f9; /* Fondo claro */
+  background-color: #3d3c3cc3; /* Fondo claro */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
 }
 
 .car {
   width: 100%; /* Abarca todo el ancho del contenedor padre */
   max-width: 100%; /* Asegura que no exceda el ancho del contenedor padre */
-  background-color: #fefefe;
+  background-color: #2f2e2e;
   border-radius: 1rem;
   padding: 1rem; /* Aumenta el espacio interno */
-  color: #141417;
+  color: #ffffff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
 }
 
 .card__hero {
-  background-color: #fef4e2;
+  background-color: #353535;
   border-radius: 0.5rem 0.5rem 0 0;
   padding: 1.5rem;
   font-size: 0.875rem;
@@ -442,7 +442,7 @@
   font-weight: 700;
   font-size: 1rem; /* Tamaño de fuente */
   height: auto; /* Permite que crezca dinámicamente */
-  background-color: #f3f3f3; /* Fondo claro */
+  background-color: #373737; /* Fondo claro */
   border-top: 2px solid #5e4dcd; /* Borde superior */
   gap: 1rem; /* Espaciado entre los elementos */
 }
