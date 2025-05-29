@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { comic } from '../interfaces/comic';
+import { comic } from '../interfaces/libro'; // Adjust the path as necessary
 
 
 @Injectable({

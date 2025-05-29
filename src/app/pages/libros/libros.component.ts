@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { comic } from '../../interfaces/comic';
-import { ComicService } from '../../services/comic.service';
+import { comic } from '../../interfaces/libro'; // Adjust the path as necessary
+import { ComicService } from '../../services/libro.service';
 
 @Component({
   selector: 'app-libros',

@@ -41,12 +41,19 @@ input[type="text"]:focus {
   transition: background-color 0.3s ease;
 }
 
+.button1 {
+  display: block; /* Necesario para que margin auto funcione */
+  margin: 0 auto 2rem auto; /* Centrado horizontal y margen inferior */
+}
+
 .button:hover {
   background-color: #357ab7;
 }
 
 /* Contenedor de resultados del libro */
 .book-card {
+  display: block;
+  margin: 0 auto 2rem auto;
   background-color: white;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -55,6 +62,11 @@ input[type="text"]:focus {
   max-width: 600px;
   margin-top: 1rem;
   text-align: left;
+}
+
+.Portada {
+  display: block; /* Necesario para que margin auto funcione */
+  margin: 0 auto 2rem auto; /* Centrado horizontal y margen inferior */
 }
 
 .book-card h1 {
