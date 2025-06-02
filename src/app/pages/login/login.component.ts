@@ -4,9 +4,9 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
-  standalone:false,
+  standalone: false,
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrl: './login.component.css',
 })
 export class LoginComponent {
   email: string = '';
@@ -20,15 +20,16 @@ export class LoginComponent {
     this.http.post('http://localhost/entretenia/Inicio.php', datos).subscribe(
       (response: any) => {
         if (response.success) {
-          this.router.navigate(['/home']); 
+          localStorage.setItem('logueado', 'true'); // <--- Guarda el estado
+          this.router.navigate(['/home']);
         } else {
-          this.mensaje = response.message; 
-        } 
+          this.mensaje = response.message;
+        }
       },
       (error) => {
         console.error('Error en la solicitud:', error);
         this.mensaje = 'Error en la comunicación con el servidor';
-      }
-    );
-  }
+      }
+    );
+  }
 }

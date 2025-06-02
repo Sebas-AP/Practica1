@@ -11,18 +11,20 @@ import { TeamComponent } from './pages/team/team.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { ChatComponent } from './pages/chat/chat.component';
+import { AuthGuard } from './guards/auth.guard';
+
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: '', pathMatch: 'full', redirectTo: 'home' },
-  { path: 'series', component: SeriesComponent },
-  { path: 'libros', component: LibrosComponent },
-  { path: 'musica', component: MusicaComponent },
-  { path: 'peliculas', component: PeliculasComponent },
-  { path: 'videojuegos', component: VideojuegosComponent },
-  { path: 'team', component: TeamComponent },
+  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: '', pathMatch: 'full', redirectTo: 'login' },
+  { path: 'series', component: SeriesComponent, canActivate: [AuthGuard] },
+  { path: 'libros', component: LibrosComponent, canActivate: [AuthGuard] },
+  { path: 'musica', component: MusicaComponent, canActivate: [AuthGuard] },
+  { path: 'peliculas', component: PeliculasComponent, canActivate: [AuthGuard] },
+  { path: 'videojuegos', component: VideojuegosComponent, canActivate: [AuthGuard] },
+  { path: 'team', component: TeamComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'chat', component: ChatComponent },
+  { path: 'chat', component: ChatComponent, canActivate: [AuthGuard] },
   { path: '**', component: NotfoundComponent },
 ];
 
