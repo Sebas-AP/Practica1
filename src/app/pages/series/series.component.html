@@ -1,4 +1,7 @@
-<div class="input-container">
+<div class="cuerpo">
+    <div class="contp">
+    <h1>Series</h1>
+    <div class="input-container">
     <input type="text" [(ngModel)]="nom" placeholder="Search for a series..." (keyup.enter)="cargarSeries()"/>
     <button class="button" (click)="cargarSeries()">Buscar</button>
 </div>
@@ -37,4 +40,9 @@
             <p>{{ser.totalSeasons}}</p>
         </div>
     </div>
+</div>
+<div *ngIf="!ser" class="no-results">
+    <img src="assets/img/play-alternativo.png" alt="" class="play">
+    <p>No results found. Please try a different search.</p>
+</div>
 </div>

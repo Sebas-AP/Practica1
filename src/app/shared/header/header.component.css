@@ -2,3 +2,17 @@
     text-decoration: none;
     color:chartreuse
 }
+#topbar{
+    background-color: #000000 !important;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#navbar{
+    background-color: #000000 !important;
+}
+#Tenia{
+    color:chartreuse !important;
+}

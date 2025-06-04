@@ -1,5 +1,5 @@
 .nombre{
-  color:#07ff07 important;
+  color:#07ff07 !important;
 }
 .contp {
   margin-left: 20px;
@@ -150,4 +150,40 @@
 }
 .calif {
   color: aqua;
+}
+.contp{
+  margin-top: -50px;
+  margin-bottom: -40px;
+  background-color: #14161a;
+}
+.extras h2{
+  color: #07ff07;
+  margin-top: 20px;
+}
+.extras p{
+  color: #e8e8e8;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.cuerpo {
+  padding-top: 50px;
+  background-color: #14161a !important;
+  padding-bottom: 60px; /* Ajusta este valor a la altura real de tu footer */
+  
+} 
+.play{
+  width: 20%;
+}
+.no-results {
+  color: #e8e8e8;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.2rem;
+  margin-bottom: 20%;
+}
+.no-results p{
+  margin-top: 25px;
+}
+*{
+  background-color: #14161a !important;
 }

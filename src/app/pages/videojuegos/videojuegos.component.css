@@ -218,3 +218,9 @@
   display: grid;
   place-items: center;
 }
+.cuerpo {
+  padding-top: 50px;
+  background-color: #14161a !important;
+  padding-bottom: 60px; /* Ajusta este valor a la altura real de tu footer */
+  
+} 

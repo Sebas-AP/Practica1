@@ -182,3 +182,12 @@
         width: 0.9rem;
     }
 }
+.cuerpo{
+  padding-top: 50px;
+  background-color: #14161a !important;
+  padding-bottom: 70px; /* Ajusta este valor a la altura real de tu footer */
+  
+}
+h1{
+  color:chartreuse;
+}

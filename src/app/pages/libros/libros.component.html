@@ -1,4 +1,6 @@
-<input class="button1" type="text" [(ngModel)]="com" />
+<div class="cuerpo">
+  <h1>Libros</h1>
+  <input class="button1" type="text" [(ngModel)]="com" />
 <button class="button" (click)="lib()">Buscar</button>
 
 <div class="book-card" *ngIf="libro.docs.length > 0">
@@ -13,4 +15,9 @@
   <h2>Año de publicación:</h2>
   <h1>{{ libro.docs[0].first_publish_year }}</h1>
   <h1>{{libro.docs[0].cover_edition_key}}</h1>
+</div>
+  <div class="no-results" *ngIf="libro.docs.length === 0">
+    <img src="assets/img/libro (1).png" alt="" class="play">
+    <p>No se encontraron resultados.</p>
+  </div>
 </div>

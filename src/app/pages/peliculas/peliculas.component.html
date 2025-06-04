@@ -1,13 +1,14 @@
-<h1>Peliculas</h1>
+<div class="cuerpo">
+    <h1>Peliculas</h1>
         
 <div class="input-container">
     <input type="text" [(ngModel)]="pelimovies" />
-    <button class="button" value="Consultar" (click)="Mov()">Buscar</button>
+    <button class="button" value="Consultar" (click)="Mov()" (keyup.enter)="Mov()">Buscar</button>
     
 </div>
 
-<div class="card">        
-<article>
+<div class="card" >        
+<article *ngIf="pel">
 <div class="row">
     <div class="pelicula" > 
         <h2>{{pel.Title}}</h2>   
@@ -28,5 +29,10 @@
     </div>
 </div>
 </article>
+</div>
+<div *ngIf="!pel" class="no-results">
+    <img src="assets/img/play-alternativo.png" alt="" class="play">
+    <p>No results found. Please try a different search.</p>
+</div>
 </div>
 

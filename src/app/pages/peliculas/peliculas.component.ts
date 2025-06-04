@@ -12,7 +12,7 @@ import { datos_Peliculas } from '../../../interfaces/peliculas'; // Adjust the p
 export class PeliculasComponent implements OnInit {
   pel!: datos_Peliculas;
   
-  pelimovies: string = "";
+  pelimovies: string = ''; // Default value, can be changed by user input
   constructor(private service: PeliculasServiceService ) { }
 
   ngOnInit(): void {

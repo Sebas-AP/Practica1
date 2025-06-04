@@ -187,3 +187,12 @@
     border-radius: 15px;
     transition: all 0.5s;
   }
+.cuerpo {
+  padding-top: 50px;
+  background-color: #14161a !important;
+  padding-bottom: 60px; /* Ajusta este valor a la altura real de tu footer */
+  
+} 
+h1{
+  color:#69ff3b;
+}

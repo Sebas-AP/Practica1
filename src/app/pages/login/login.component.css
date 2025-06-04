@@ -143,3 +143,6 @@ input[type="submit"].submit:hover {
         padding: 16px 4px 12px 4px;
     }
 }
+.tit{
+    color:#42fc25 !important;
+}
