@@ -118,10 +118,15 @@ input[type="submit"].submit:hover,
   background: linear-gradient(90deg, #42fc25 0%, #004902 100%);
   box-shadow: 0 4px 16px rgba(66, 252, 37, 0.18);
 }
-
+.Inis{
+  color:#fff !important;
+  hover{
+    color:#3efc25 !important;
+  }
+}
 .error,
 span[ng-reflect-ng-if] {
-  color: #e74c3c;
+  color: #e74c3c !important;
   font-size: 0.98rem;
   margin-top: 10px;
   margin-bottom: 0;
@@ -129,7 +134,9 @@ span[ng-reflect-ng-if] {
   font-weight: 500;
   display: block;
 }
-
+span{
+  color:#e74c3c;
+}
 .mt-5 {
   margin-top: 2rem !important;
 }
